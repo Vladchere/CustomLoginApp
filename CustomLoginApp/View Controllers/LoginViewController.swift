@@ -10,11 +10,10 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
-	@IBOutlet weak var firstNameTextField: UITextField!
-	@IBOutlet weak var lastNameTextField: UITextField!
+	@IBOutlet weak var emailTextField: UITextField!
+	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var loginButton: UIButton!
 	@IBOutlet weak var errorLabel: UILabel!
-
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +28,8 @@ class LoginViewController: UIViewController {
 		errorLabel.alpha = 0
 
 		// Style the elements
-		Utilities.styleTextField(firstNameTextField)
-		Utilities.styleTextField(lastNameTextField)
+		Utilities.styleTextField(emailTextField)
+		Utilities.styleTextField(passwordTextField)
 		Utilities.styleFilledButton(loginButton)
 	}
 
@@ -38,9 +37,21 @@ class LoginViewController: UIViewController {
 		// Validate text fields
 
 		// Create cleaned version of the text field
+		let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+		let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
 		// Singing in the user
-		Auth.auth().signIn(withEmail: <#T##String#>, password: <#T##String#>, completion: <#T##((AuthDataResult?, Error?) -> Void)?##((AuthDataResult?, Error?) -> Void)?##(AuthDataResult?, Error?) -> Void#>)
+		Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
 
+			if error != nil {
+				self.errorLabel.text = error!.localizedDescription
+				self.errorLabel.alpha = 1
+			} else {
+				let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+
+				self.view.window?.rootViewController = homeViewController
+				self.view.window?.makeKeyAndVisible()
+			}
+		}
 	}
 }

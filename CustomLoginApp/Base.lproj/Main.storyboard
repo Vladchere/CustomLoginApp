@@ -71,12 +71,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tiw-32-dZl">
                                 <rect key="frame" x="40" y="40" width="240" height="230.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bx2-hp-duo">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bx2-hp-duo">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Te-Sa-dSV">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Te-Sa-dSV">
                                         <rect key="frame" x="0.0" y="70" width="240" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -91,7 +91,7 @@
                                             <action selector="loginTapped:" destination="gv1-Hi-kjx" eventType="touchUpInside" id="N2F-zw-GUc"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHI-bP-vHP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHI-bP-vHP">
                                         <rect key="frame" x="0.0" y="210" width="240" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
@@ -114,10 +114,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="xTU-KN-lxo"/>
                     <connections>
+                        <outlet property="emailTextField" destination="Bx2-hp-duo" id="xVd-kT-K99"/>
                         <outlet property="errorLabel" destination="pHI-bP-vHP" id="aNm-U1-sA2"/>
-                        <outlet property="firstNameTextField" destination="Bx2-hp-duo" id="xVd-kT-K99"/>
-                        <outlet property="lastNameTextField" destination="7Te-Sa-dSV" id="NUd-3P-7oE"/>
                         <outlet property="loginButton" destination="Nc2-XL-LAi" id="Ypw-He-Bj5"/>
+                        <outlet property="passwordTextField" destination="7Te-Sa-dSV" id="NUd-3P-7oE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1d-Ih-4xN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,7 +192,7 @@
                                             <action selector="signUpTapped:" destination="F34-8m-KG8" eventType="touchUpInside" id="cNn-tX-fMv"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH6-2R-pia">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH6-2R-pia">
                                         <rect key="frame" x="0.0" y="350" width="240" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
