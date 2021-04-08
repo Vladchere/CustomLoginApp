@@ -10,7 +10,7 @@
 		7DE7DBD2822779C1AE8EF634 /* Pods_CustomLoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07219EE23A51F5159F3ED98A /* Pods_CustomLoginApp.framework */; };
 		8610FA53261622D00012EFAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610FA52261622D00012EFAF /* AppDelegate.swift */; };
 		8610FA55261622D00012EFAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610FA54261622D00012EFAF /* SceneDelegate.swift */; };
-		8610FA57261622D00012EFAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610FA56261622D00012EFAF /* ViewController.swift */; };
+		8610FA57261622D00012EFAF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610FA56261622D00012EFAF /* MainViewController.swift */; };
 		8610FA5A261622D10012EFAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8610FA58261622D10012EFAF /* Main.storyboard */; };
 		8610FA5C261622D10012EFAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8610FA5B261622D10012EFAF /* Assets.xcassets */; };
 		8610FA5F261622D10012EFAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8610FA5D261622D10012EFAF /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 		8610FA4F261622D00012EFAF /* CustomLoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomLoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8610FA52261622D00012EFAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8610FA54261622D00012EFAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8610FA56261622D00012EFAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8610FA56261622D00012EFAF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8610FA59261622D10012EFAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8610FA5B261622D10012EFAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8610FA5E261622D10012EFAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,28 +95,24 @@
 			isa = PBXGroup;
 			children = (
 				8610FA76261631340012EFAF /* Helpers */,
-				8610FA70261623AF0012EFAF /* View Controllers */,
+				8610FA70261623AF0012EFAF /* ViewControllers */,
 				86940CC3261A30470023742A /* Media */,
-				8610FA52261622D00012EFAF /* AppDelegate.swift */,
-				8610FA54261622D00012EFAF /* SceneDelegate.swift */,
-				8610FA58261622D10012EFAF /* Main.storyboard */,
-				8610FA5B261622D10012EFAF /* Assets.xcassets */,
-				8610FA5D261622D10012EFAF /* LaunchScreen.storyboard */,
-				86A5041526176601008F0E26 /* GoogleService-Info.plist */,
-				8610FA60261622D10012EFAF /* Info.plist */,
+				866446A2261F4E3F006EC5E7 /* SupportingFiles */,
+				866446A1261F4E12006EC5E7 /* Storyboards */,
+				866446A4261F4E48006EC5E7 /* Sources */,
 			);
 			path = CustomLoginApp;
 			sourceTree = "<group>";
 		};
-		8610FA70261623AF0012EFAF /* View Controllers */ = {
+		8610FA70261623AF0012EFAF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8610FA56261622D00012EFAF /* ViewController.swift */,
+				8610FA56261622D00012EFAF /* MainViewController.swift */,
 				8610FA672616236E0012EFAF /* SignUpViewController.swift */,
 				8610FA6A261623830012EFAF /* LoginViewController.swift */,
 				8610FA6D261623920012EFAF /* HomeViewController.swift */,
 			);
-			path = "View Controllers";
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		8610FA76261631340012EFAF /* Helpers */ = {
@@ -126,6 +122,34 @@
 				86BA5C672617B39500132BC4 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		866446A1261F4E12006EC5E7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8610FA58261622D10012EFAF /* Main.storyboard */,
+				8610FA5D261622D10012EFAF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		866446A2261F4E3F006EC5E7 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8610FA52261622D00012EFAF /* AppDelegate.swift */,
+				8610FA54261622D00012EFAF /* SceneDelegate.swift */,
+				86A5041526176601008F0E26 /* GoogleService-Info.plist */,
+				8610FA60261622D10012EFAF /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		866446A4261F4E48006EC5E7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8610FA5B261622D10012EFAF /* Assets.xcassets */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		86940CC3261A30470023742A /* Media */ = {
@@ -252,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8610FA57261622D00012EFAF /* ViewController.swift in Sources */,
+				8610FA57261622D00012EFAF /* MainViewController.swift in Sources */,
 				8610FA53261622D00012EFAF /* AppDelegate.swift in Sources */,
 				86BA5C682617B39500132BC4 /* Constants.swift in Sources */,
 				8610FA742616312E0012EFAF /* Utilities.swift in Sources */,
@@ -409,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D28YKYJC2T;
-				INFOPLIST_FILE = CustomLoginApp/Info.plist;
+				INFOPLIST_FILE = CustomLoginApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.vladislavcheremisov.CustomLoginApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -429,7 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D28YKYJC2T;
-				INFOPLIST_FILE = CustomLoginApp/Info.plist;
+				INFOPLIST_FILE = CustomLoginApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,7 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.vladislavcheremisov.CustomLoginApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
